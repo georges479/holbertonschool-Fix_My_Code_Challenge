@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /*
-    Print a siuare with the character #
+    Print a square with the character #
     
     The size of the square must be the first argument 
     of the program.
@@ -14,10 +14,11 @@ if (process.argv.length <= 2) {
     process.exit(1)
 }
 
-size = parseInt(process.argv[2], 16)
-const char = '#';
+const size = process.argv[2]
 
-for (let i = 0 ; i <= size ; i++) {
-    console.log(char.repeat(i));
+for (let i = 0 ; i < size ; i ++) {
+    for (let j = 0 ; j < size ; j ++) {
+        process.stdout.write("#");
+    }
     process.stdout.write("\n");
 }
